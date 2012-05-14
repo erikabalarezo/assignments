@@ -17,7 +17,7 @@ var_dump($_POST);
 		<input id="number-one" name="number-one">
         
         <label for="number-two">Number 2</label>
-        <select id="number-two" name="number-two">
+        <input id="number-two" name="number-two">
         
         <label for="function">Function</label>
         <select id="function" name="function">
@@ -26,7 +26,7 @@ var_dump($_POST);
             <option value="multiply">*</option>
             <option value="division">/</option>
          </select>
-		<button type="submit">Submit</button>
+		<button type="submit">Calculate</button>
 	</form>
 	<?php else : ?>
     	<?php
