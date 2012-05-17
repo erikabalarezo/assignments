@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color:#FFF;
+}
+body {
+	margin: 0 auto;
+	padding: 1em 1em;
+	width: 55%;
+	background-color:#B0CAFF;
+}
+
+h1 {
+	text-transform: uppercase;
+	text-align:center;
+	padding-bottom: 0.5em;
+}
+.moneyform {
+	padding-bottom: 2em;
+}
