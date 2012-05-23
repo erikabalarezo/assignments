@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+li {
+	color: #333;
+	/*text-decoration: underline;*/
+	/*text-decoration: line-through;*/
+	line-height: 1.2em;
+	font-size: 1.2em;
+}
+
+.complete {
+	color: #999;
+	text-decoration: line-through;
+}
+
+.incomplete {
+	color: #333;
+}
