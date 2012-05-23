@@ -1,6 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
 
+html {
+	background-color: #FFF;
+}
+body {
+	padding-top: 1em;
+	padding-bottom:1em;
+	margin: 0 auto;
+	width: 50%;
+	background-color: #DEEFEF;
+}
+
+h1 {
+	text-align:center;
+}
+form {
+	padding-left: 1em;
+}
 li {
 	color: #333;
 	/*text-decoration: underline;*/
