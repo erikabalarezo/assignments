@@ -1,3 +1,48 @@
 @charset "utf-8";
 /* CSS Document */
+html {
+	background-color:#FFF;
+}
+body {
+	margin: 0 auto;
+	padding: 0.5em 0 1em 1em;
+	
+	width: 50%;
+	background-color: #CBE4E4;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+label {
+	display:block;
+	margin-top: 0.5em;
+}
+
+fieldset {
+	width: 305px;
+	margin-top: 0.5em;
+}
+legend {
+	
+}
+fieldset label {
+	display: inline-block;
+	width: 70px;
+}
+#notes {
+	width: 325px;
+	
+}
+#acceptterms {
+	padding-top: 2em;
+}
+button {
+	margin-top: 1em;
+}
+
+
+
 
