@@ -32,6 +32,10 @@ fieldset label {
 	display: inline-block;
 	width: 70px;
 }
+.selectlangmessage {
+	clear: both;
+	
+}
 #notes {
 	width: 325px;
 	
