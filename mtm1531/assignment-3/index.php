@@ -76,6 +76,7 @@ require_once 'includes/registform-processor.php';
 
 		</div>
 		<button type="submit">Send</button>
+			
 	</form>
 
 
