@@ -17,7 +17,7 @@ require_once 'includes/registform-processor.php';
 				<strong class="error">is required</strong>
 				<?php endif;?>
 			</label>
-			<input id="name" name="name" required value="<?php echo $name; ?>">
+			<input type="text" id="name" name="name" required value="<?php echo $name; ?>">
         </div>
 		<div>
         	<label for="email">E-mail Address<?php if(isset($errors['email'])): ?>
@@ -31,14 +31,14 @@ require_once 'includes/registform-processor.php';
 				<strong class="error">is required</strong>
 				<?php endif;?>
 			</label>
-			<input id="username" name="username" required value="<?php echo $username; ?>">
+			<input type="text" id="username" name="username" required value="<?php echo $username; ?>">
         </div>
 		<div>
 			<label for="password">Password <?php if(isset($errors['password'])): ?>
 				<strong class="error">is required</strong>
 				<?php endif;?>
 			</label>
-			<input id="password" name="password" required value="<?php echo $password; ?>">
+			<input type="password" id="password" name="password" required value="<?php echo $password; ?>">
         </div>
 		<div>
         <fieldset>
