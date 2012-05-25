@@ -1,0 +1,23 @@
+body {
+	background-color: #D1E9E9;
+
+}
+h1 {
+	
+	margin: 0;
+	padding: 0;
+	background-color: #F30;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	position: absolute;
+	left: 200px;
+	top: 100px;
+	/*dont forget to put the other browsers*/
+	-moz-transition: all 250ms linear;
+	text-align: center;
+	font-size: 10em;
+	line-height: 200px;
+	border: 4px solid #000;
+	
+}
