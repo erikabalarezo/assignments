@@ -61,11 +61,12 @@ require_once 'includes/registform-processor.php';
 		</fieldset>
 		</div>
 		<div>
-			<label for="notes">Notes
+			<label for="notes">Notes<?php if (isset($errors['notes'])) : ?>
+				<strong>must be at least 25 characters</strong><?php endif; ?></label>
 
 			</label>
 			<textarea id="notes" name="notes" value="<?php echo $notes;?>"></textarea>
-            <!--<p>5 to 100 characters long</p> -->
+			<p>At least 25 characters long</p>
 		</div>
 		<div>
 			<input type="checkbox" id="acceptterms" name="acceptterms" required value="1">
