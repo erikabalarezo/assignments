@@ -20,8 +20,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(empty($password)) {
 		$errors['password'] = true;
 	}
-	if($preferredlang != 'english' || $preferredlang != 'french' || $preferredlang != 'spanish'){
+	if (!array_key_exists($preferredlang, $possible_preferredlang)) {
 		$errors['preferredlang'] = true;
+	}
+	
+	
+	if(!isset($_POST['acceptterms'])) {
+		$errors['acceptterms'] = true;
 	}
 	
 	
