@@ -66,7 +66,7 @@ require_once 'includes/registform-processor.php';
 
 			</label>
 			<textarea id="notes" name="notes" value="<?php echo $notes;?>"></textarea>
-			<p>At least 25 characters long</p>
+			<!--<p>At least 25 characters long</p>-->
 		</div>
 		<div>
 			<input type="checkbox" id="acceptterms" name="acceptterms" required value="1">
