@@ -6,6 +6,10 @@ $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 $preferredlang =filter_input(INPUT_POST, 'preferredlang', FILTER_SANITIZE_STRING);
 $notes =filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
+$erika = 'Erika Balarezo';
+$erikaemail = 'erikabalarezo@yahoo.com';
+$confirmmessage = 'Your registration is confirmed.';
+$mailsubject = 'Registration';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(empty($name)) {
@@ -23,11 +27,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (!array_key_exists($preferredlang, $possible_preferredlang)) {
 		$errors['preferredlang'] = true;
 	}
-	
-	
 	if(!isset($_POST['acceptterms'])) {
 		$errors['acceptterms'] = true;
 	}
 	
+	if(empty($errors)) {
+		$headers = 'From: ' . $erika . ' <' . $erikaemail . '>';
+		mail($email, $mailsubject, $confirmmessage, $headers); 
+		
+	}
 	
 }
