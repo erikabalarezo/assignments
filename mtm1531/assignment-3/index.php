@@ -35,7 +35,7 @@ require_once 'includes/registform-processor.php';
 		</div>
 		<div>
 			<label for="username">User Name <?php if(isset($errors['username'])): ?>
-				<strong class="error">is required</strong>
+				<strong class="error">is required and should be less than 25 characters</strong>
 				<?php endif;?>
 			</label>
 			<input type="text" id="username" name="username" required value="<?php echo $username; ?>">
@@ -64,11 +64,9 @@ require_once 'includes/registform-processor.php';
 			<!--<p>At least 25 characters long</p>-->
 		</div>
 		<div>
-			<input type="checkbox" id="acceptterms" name="acceptterms" required value="1">
+			<input type="checkbox" id="acceptterms" name="acceptterms" required value="1"<?php if (isset($_POST['acceptterms'])) { echo ' checked'; } ?>>
 			<label for="acceptterms">Accept terms?<?php if(isset($errors['acceptterms'])): ?>
-				<strong class="error">You must comply!</strong><?php endif;?>            	
-				</label>
-
+				<strong class="error">You must comply!</strong><?php endif;?></label>
 		</div>
 		<button type="submit">Send</button>
 			
