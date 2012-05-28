@@ -29,11 +29,8 @@ require_once 'includes/registform-processor.php';
 			<input type="text" id="name" name="name" required value="<?php echo $name; ?>">
 		</div>
 		<div>
-			<label for="email">E-mail Address<?php if(isset($errors['email'])): ?>
-				<strong class="error">is required</strong>
-				<?php endif;?>
-			</label>
-			<input type="email" id="email" name="email" required value"<?php echo $email;?>">
+			<label for="email">E-mail Address<?php if (isset($errors['email'])) : ?><strong>is required</strong><?php endif; ?></label>
+			<input id="email" name="email" value="<?php echo $email; ?>">
 		</div>
 		<div>
 			<label for="username">User Name <?php if(isset($errors['username'])): ?>
