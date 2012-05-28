@@ -19,6 +19,7 @@ require_once 'includes/registform-processor.php';
 </head>
 
 <body>
+	<?php if (!$formOk) : ?>
 	<h1>Registration Form</h1>
 	<form method= "post" action="index.php">
 		<div>
@@ -72,7 +73,7 @@ require_once 'includes/registform-processor.php';
 		<button type="submit">Send</button>
 			
 	</form>
-
+	<?php endif; ?>
 
 </body>
 </html>
