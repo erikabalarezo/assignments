@@ -1,0 +1,8 @@
+SELECT id, movie_title, release_date, director
+FROM movies
+WHERE id = 1
+
+SELECT movie_title, release_date, director
+FROM movies
+WHERE id = 1 OR id = 2 OR id = 3
+ORDER BY movie_title ASC
