@@ -30,7 +30,7 @@ require_once 'includes/registform-processor.php';
 			<input type="text" id="name" name="name" required value="<?php echo $name; ?>">
 		</div>
 		<div>
-			<label for="email">E-mail Address<?php if (isset($errors['email'])) : ?><strong>is required</strong><?php endif; ?></label>
+			<label for="email">E-mail Address<?php if (isset($errors['email'])) : ?><strong class="error"> is required</strong><?php endif; ?></label>
 			<input id="email" name="email" value="<?php echo $email; ?>">
 		</div>
 		<div>
@@ -50,7 +50,7 @@ require_once 'includes/registform-processor.php';
 		<div>
 		<fieldset>
 			<legend>Preferred Language</legend>
-				<?php if (isset($errors['preferredlang'])) : ?><p class="selectlangmessage"><strong>Select Preferred Language</strong></p><?php endif; ?>
+				<?php if (isset($errors['preferredlang'])) : ?><p class="selectlangmessage"><strong class="error">Select Preferred Language</strong></p><?php endif; ?>
 				<?php foreach ($possible_preferredlang as $key => $value) : ?>
 					<input type= "radio" id="<?php echo $key; ?>" name="preferredlang" 
 						value="<?php echo $key; ?>"<?php if ($key == $preferredlang) { echo ' checked'; } ?>>
