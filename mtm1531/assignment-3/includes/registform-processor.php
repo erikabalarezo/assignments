@@ -10,6 +10,7 @@ $erika = 'Erika Balarezo';
 $erikaemail = 'erikabalarezo@yahoo.com';
 $confirmmessage = 'Your registration is confirmed.';
 $mailsubject = 'Registration';
+$formOk = false;
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(empty($name)) {
@@ -33,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if(empty($errors)) {
 		echo 'Thank you, the form was submitted!';
-		
+		$formOk= true;
 		$headers = 'From: ' . $erika . ' <' . $erikaemail . '>';
 		mail($email, $mailsubject, $confirmmessage, $headers); 
 		
