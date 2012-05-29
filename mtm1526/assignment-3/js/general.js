@@ -1,10 +1,15 @@
-$(document).ready(function(){
-	console.log('IN jQuery');
-	//closs platform use on
-	var property;
+var property;
 	var ballcolor;
 	var circle;
 	var stylecircle;
+	
+$(document).ready(function(){
+	console.log('IN jQuery');
+	//closs platform use on
+	//var property;
+	//var ballcolor;
+	//var circle;
+	//var stylecircle;
 	
 	$('#bordercolor').on('click', function() {
 		property = 'border-color';
@@ -28,5 +33,9 @@ $(document).ready(function(){
 		$('.myCircle').css( property, ballcolor);
 		
 	});
+	$('#hideshow').on('click', function() {
+		$('.myCircle').toggle("slow");
+
 	
+	});
 });
