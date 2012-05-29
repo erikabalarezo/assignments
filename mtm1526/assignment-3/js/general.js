@@ -28,8 +28,10 @@ $(document).ready(function(){
 		ballcolor = $('#color-box').val();
 		console.log(ballcolor);
 	});
-	$('#apply').on('click', function() {
+	$('#apply').on('click', function(ev) {
 		console.log('clicked APPLY BUTTON');
+		ev.preventDefault();
+
 		$('.myCircle').css( property, ballcolor);
 		
 	});
