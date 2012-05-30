@@ -3,36 +3,21 @@ $(document).ready(function(){
 	
 	var property;
 	var ballcolor;
-	var circle;
-	var stylecircle;
 	$('#property').on('click', function() {
 		property = $('#property').val();
-		console.log('property clicked: ' + property);
+		//console.log('property clicked: ' + property);
 	});
-	/*
-	$('#bordercolor').on('click', function() {
-		property = 'border-color';
-		console.log('BORDER COLOR CLICKED');
-	});
-	$('#backgroundcolor').on('click', function() {
-		property = 'background-color';
-		console.log('BACKGROUND COLOR CLIKED');
-	});
-	$('#color').on('click', function() {
-		console.log('COLOR FROM BOX SELECTION');
-		property = 'color';
-	});
-	*/
+	
 	$('#color-box').on('change', function() {
 		ballcolor = $('#color-box').val();
-		console.log(ballcolor);
+		//console.log(ballcolor);
 	});
 	
 	$('#apply').on('click', function(ev) {
-		console.log('clicked APPLY BUTTON');
+		//console.log('clicked APPLY BUTTON');
 		ev.preventDefault();
-
-	$('.myCircle').css( property, ballcolor);
+		if((property) && (ballcolor))
+			$('.myCircle').css( property, ballcolor);
 		
 	});
 	$('#hideshow').on('click', function() {
