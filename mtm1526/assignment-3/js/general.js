@@ -1,16 +1,15 @@
-var property;
+$(document).ready(function(){
+	//console.log('IN jQuery');
+	
+	var property;
 	var ballcolor;
 	var circle;
 	var stylecircle;
-	
-$(document).ready(function(){
-	console.log('IN jQuery');
-	//closs platform use on
-	//var property;
-	//var ballcolor;
-	//var circle;
-	//var stylecircle;
-	
+	$('#property').on('click', function() {
+		property = $('#property').val();
+		console.log('property clicked: ' + property);
+	});
+	/*
 	$('#bordercolor').on('click', function() {
 		property = 'border-color';
 		console.log('BORDER COLOR CLICKED');
@@ -23,16 +22,17 @@ $(document).ready(function(){
 		console.log('COLOR FROM BOX SELECTION');
 		property = 'color';
 	});
+	*/
 	$('#color-box').on('change', function() {
-		console.log('WROTE A COLOR');
 		ballcolor = $('#color-box').val();
 		console.log(ballcolor);
 	});
+	
 	$('#apply').on('click', function(ev) {
 		console.log('clicked APPLY BUTTON');
 		ev.preventDefault();
 
-		$('.myCircle').css( property, ballcolor);
+	$('.myCircle').css( property, ballcolor);
 		
 	});
 	$('#hideshow').on('click', function() {
