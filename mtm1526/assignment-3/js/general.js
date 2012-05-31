@@ -1,28 +1,17 @@
 $(document).ready(function(){
-	//console.log('IN jQuery');
+	var myball = $('.myCircle');
 	
-	var property;
-	var ballcolor;
-	$('#property').on('click', function() {
-		property = $('#property').val();
-		//console.log('property clicked: ' + property);
-	});
-	
-	$('#color-box').on('change', function() {
-		ballcolor = $('#color-box').val();
-		//console.log(ballcolor);
-	});
-	
-	$('#apply').on('click', function(ev) {
-		//console.log('clicked APPLY BUTTON');
+	$('form').on('submit', function(ev) {
+		var property =$('#property');
+		var ballcolor = $('#color-box');
 		ev.preventDefault();
-		if((property) && (ballcolor))
-			$('.myCircle').css( property, ballcolor);
-		
-	});
-	$('#hideshow').on('click', function() {
-		$('.myCircle').toggle("slow");
 
+		property = $('#property').val();
+		ballcolor = $('#color-box').val();
+		myball.css( property, ballcolor);
+		$('#hideshow').on('click', function(ev) {
+			myball.toggle(200);
 	
+		});
 	});
 });
