@@ -1,16 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 html {
-	background:#FFF;
+	background:#ffffff;
 }
 body {
 	margin: 0 auto;
 	padding: 0;
-	background-color: #AFD8D8;
+	/*background-color: #AFD8D8;*/
+	/*background:#999 url('../images/cinepic.jpg') no-repeat right top;*/
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	width: 50%;
 }
 h1 {
+	background:#999 url('../images/cinepic.jpg') no-repeat right top;
 	text-align: center;
 	font-size: 2em;
 	text-transform: uppercase;
