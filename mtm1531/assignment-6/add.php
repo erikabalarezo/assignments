@@ -55,11 +55,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <div>
         	<label for="release_date">
-            	Release Date
+            	Release Date (Format: YYYY-MM-DD)</p>
+                
             	<?php if (isset($errors['release_date'])):?>
                 <strong class="error">is required</strong>
             	<?php endif; ?>
             </label>
+          
             <input id= "release_date" name="release_date" required value="<?php echo $release_date;?>">
         </div>
         
