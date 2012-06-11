@@ -23,8 +23,10 @@ $results = $sql->fetchALL();
 
 
 <body>
-	<a href="add.php">Add a Movie</a>
+
 	<h1>Movie Browser</h1>
+    
+    <a href="add.php">Add a Movie</a>
 	<?php foreach($results as $movie): ?>
 	<h2><a href="single.php?id=<?php echo $movie['id'];?>">
 	
