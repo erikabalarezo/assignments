@@ -22,13 +22,30 @@ h1 {
 	text-transform: uppercase;
 	
 }
-h2, dl {
+
+h2, dl, div, label {
 	padding-left: 1em;
 
 }
-dl {
+
+dl, div, label {
 	color: #FFF;
 }
 a {
 	color:#FF8040;
+	
+}
+
+.editdetails {
+	margin-top: 1em;
+}
+.deledit {
+	font-size: 1.2em;
+	
+	padding-left: 1em;
+}
+.savebutton {
+	margin-left:1em;
+	margin-top:1em;
+	font-size:1.5em;
 }
