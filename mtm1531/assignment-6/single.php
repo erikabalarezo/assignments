@@ -23,11 +23,12 @@ $results = $sql->fetch();
 <head>
     <meta charset="utf-8">
     <title><?php echo $results['movie_title']; ?> &middot; Movies</title>
+    <link href="css/general.css" rel="stylesheet">
 </head>
 
 <body>
 	<h1><?php echo $results['movie_title']; ?></h1>
-    <dl>
+    <dl class="editdetails">
 	    <dt>Release Date</dt>
     	<dd><?php echo $results['release_date'];?></dd>
      
@@ -35,7 +36,7 @@ $results = $sql->fetch();
         <dd><?php echo $results['director'];?></dd>
     </dl>
     
-    <a href="delete.php?id=<?php echo $id;?>">Delete a Movie</a>
-    <a href="edit.php?id=<?php echo $id;?>">Edit a Movie</a>
+    <a class="deledit" href="delete.php?id=<?php echo $id;?>">Delete a Movie</a>
+    <a class="deledit" href="edit.php?id=<?php echo $id;?>">Edit a Movie</a>
 </body>
 </html>
