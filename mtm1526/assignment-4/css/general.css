@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+html {
+	/*background-color: #ccc;*/
+	background-color: #CDEA82;
+	/*background:url(../images/backgroundmonsters.jpg) left top repeat;*/
+	font: normal 100%/1.5 sans-serif;
+	font-family:"Comic Sans MS", cursive;
+	background:#CDEA82 url(../images/bigbackground.jpg) left 4em repeat-x;
+/* cream #efdfb4*/
+}
+
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	text-align:center;
+	width: 30em;
+	/*background-color:#EDD1FE;*/
+	/*background:url(../images/backgroundmonsters.jpg) left top repeat;*/
+	/*background:url(../images/bigbackground.jpg) left top repeat;*/
+	background-color:#EDD1FE;
+	color: #A25100;
+}
+
+h1 {
+	color: #A25100;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+nav li {
+	display: inline;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+	display: inline-block;
+	border-radius: 4px 4px 0 0;
+	/*background-color: #e2e2e2;*/
+	/*background-color: #D0E8E8; this is pale blue*/
+	background-color: #E28F1F;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	color: #000;
+	
+}
+
+nav .current a,
+nav .current a:link,
+nav .current a:visited {
+	background-color: #03F;
+	
+}
+
+article {
+	background-color: #fff;
+	padding: 1em;
+}
