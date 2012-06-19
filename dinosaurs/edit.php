@@ -1,7 +1,15 @@
 <?php
 $errors = array();
-require_once 'includes/db.php';
+require_once 'includes/users.php';
 
+$_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
+
+if(!user_is_signed_in()) {
+		header('Location:sign-in.php');
+		exit;
+		
+}
+require_once 'includes/db.php';
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $dino_name = filter_input(INPUT_POST, 'dino_name', FILTER_SANITIZE_STRING);
 $loves_meat = filter_input(INPUT_POST, 'loves_meat', FILTER_SANITIZE_NUMBER_INT);
