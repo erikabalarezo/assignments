@@ -23,6 +23,8 @@ body {
 }
 
 h1 {
+	margin: 0 auto;
+	padding: 0.5em 0;
 	color: #A25100;
 }
 
@@ -51,7 +53,7 @@ nav a:visited {
 nav .current a,
 nav .current a:link,
 nav .current a:visited {
-	background-color: #03F;
+	background-color: #E8cb89;
 	
 }
 
