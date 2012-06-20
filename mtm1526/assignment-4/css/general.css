@@ -4,13 +4,12 @@
 @charset "utf-8";
 /* CSS Document */
 html {
-	/*background-color: #ccc;*/
+	
 	background-color: #CDEA82;
-	/*background:url(../images/backgroundmonsters.jpg) left top repeat;*/
 	font: normal 100%/1.5 sans-serif;
 	font-family:"Comic Sans MS", cursive;
 	background:#CDEA82 url(../images/bigbackground.jpg) left 4em repeat-x;
-/* cream #efdfb4*/
+
 }
 
 
@@ -19,9 +18,6 @@ body {
 	padding: 0;
 	text-align:center;
 	width: 30em;
-	/*background-color:#EDD1FE;*/
-	/*background:url(../images/backgroundmonsters.jpg) left top repeat;*/
-	/*background:url(../images/bigbackground.jpg) left top repeat;*/
 	background-color:#EDD1FE;
 	color: #A25100;
 }
@@ -45,12 +41,10 @@ nav a:link,
 nav a:visited {
 	display: inline-block;
 	border-radius: 4px 4px 0 0;
-	/*background-color: #e2e2e2;*/
-	/*background-color: #D0E8E8; this is pale blue*/
 	background-color: #E28F1F;
 	padding: 0.5em 1em;
 	text-decoration: none;
-	color: #000;
+	color: #A25100;
 	
 }
 
@@ -64,4 +58,7 @@ nav .current a:visited {
 article {
 	background-color: #fff;
 	padding: 1em;
+}
+p {
+	padding-bottom: 1em;
 }
