@@ -1,44 +1,31 @@
 $(document).ready(function() {
+	
+	$.ajaxSetup ({
+	cache: true
+	});
+	var monsternumber;
 	$.get('monster-one.html', function(data){
-		//$('body').append(data);
 		$('#fillme').append(data);
 	});
 	
-	/*
-	$.get('monster-one.html', function(data){
-		$('#fillme').append(data);
-	});
-	*/
-	/*
-	$('#gethtml').on('click', function () {
-		$('#fillme-monster-one').load('load-me.html');
-	});
-	*/
-	$('#one').on('click', function (data) {
-		//$('body').removeData('monster-one.html');
-		//if ($('a').hasClass('one'))
-		//$('body').load('monster-two.html');
-		$('#fillme').load('monster-one.html');
-		
-			//$('body').replaceWith('monster-two.html');
 	
+	$('a').on('click', function (event) {
+		monsternumber= event.target.id;
+		//set current to the link clicked		
+		$('ul' + ' li.current').removeClass('current');
+		$(this).parent().addClass('current');
 		
+				
+		if(monsternumber == 'one') 
+			$('#fillme').load('monster-one.html');
+		if(monsternumber == 'two') 
+			$('#fillme').load('monster-two.html');
+		if(monsternumber == 'three')
+			$('#fillme').load('monster-three.html');
+		if(monsternumber == 'four')
+			$('#fillme').load('monster-four.html');
 		
 	});
-	$('#two').on('click', function () {
-		$('#fillme').load('monster-two.html');
-	});
-	$('#three').on('click', function () {
-		$('#fillme').load('monster-three.html');
-	});
-	$('#four').on('click', function () {
-		$('#fillme').load('monster-four.html');
-	});
-	/*
-	$('#sendme').on('change', function(){
-		$.post('save.php', {
-			sendme : $('#sendme').val()
-		});
-	});
-	*/
+	
+	
 });
