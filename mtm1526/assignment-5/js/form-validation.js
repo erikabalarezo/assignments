@@ -3,6 +3,7 @@ $(document).ready(function () {
 	var userAvailable = $('.user-available');
 	var emailAvailable = $('.email-available');
 	var passwordReqs = 0;
+	var cityReqs = 0;
 	$('#username').on('change', function (ev) {
 		//console.log('username');
 		var username = $(this).val();
@@ -11,10 +12,10 @@ $(document).ready(function () {
 		
 		if(username.length >=3 && username.length <= 25) {
 			var ajax = $.post('check-username.php', {
-				'username':username
+				'username' : username
 			});
 			//data is going to hava available or unavailable
-			ajax.done(function(data) {
+			ajax.done(function (data) {
 				if(data == 'available') {
 					userAvailable
 					.attr('data-status', 'available').html('Available');
@@ -34,7 +35,7 @@ $(document).ready(function () {
 	
 	});
 	
-	$('#email').on('keyup', function(ev) {
+	$('#email').on('change', function(ev) {
 		var email = $(this).val();
 		emailAvailable.attr('data-status','unchecked');
 		
@@ -97,6 +98,44 @@ $(document).ready(function () {
 		}
 	});
 	
+	$('#city').on('change', function(ev) {
+		var city = $(this).val();
+		cityReqs = 0;
+				
+		if((city.length > 0 && city.length < 50) && (city.match(/[a-zA-Z\s]/)))
+		{
+			cityReqs++;
+		}			
+		
+	});
+	
+	
+  var countryCa, countryUs;
+
+  $('[name="country"]').on('change', function (e) {
+    if ($(this).val() == 'us') {
+      if (!countryUs) {
+        $('.country-details').load('unitedstates.html', function (data) {
+          countryUs = data;
+        });
+      } else {
+        $('.country-details').html(countryUs);
+      }
+    } else {
+      if (!countryCa) {
+        $('.country-details').load('canada.html', function (data) {
+          countryCa = data;
+        });
+      } else {
+        $('.country-details').html(countryCa);
+      }
+    }
+  });
+	
+	
+	
+	
+	
 	
 	
 	$('form').on('submit',function(ev) {
@@ -104,6 +143,7 @@ $(document).ready(function () {
 			userAvailable.attr('data-status')== 'unchecked'
 			||userAvailable.attr('data-status')== 'unAvailable'
 			||passwordReq < 5
+			||cityReqs < 1
 		) {
 			ev.preventDefault(); //not let submit if any error
 		}
