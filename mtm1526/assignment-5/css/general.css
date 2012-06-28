@@ -18,6 +18,31 @@
 	content:"✖";
 }
 
+
+
+.email-available {
+	font-size: 1.125em;
+}
+
+.email-available:before {
+	content: "✔";
+}
+.email-available[data-status="unchecked"]{
+	display:none;
+}
+.email-available[data-status="available"] {
+	color:#090;
+}
+.email-available[data-status="unavailable"] {
+	color:#f33;
+}
+.email-available[data-status="unavailable"]:before {
+	content:"✖";
+}
+
+
+
+
 .pass-reqs {
 	list-style:none;
 }
