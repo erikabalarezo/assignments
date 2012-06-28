@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	//save useravailable at the top
 	var userAvailable = $('.user-available');
+	var emailAvailable = $('.email-available');
 	var passwordReqs = 0;
 	$('#username').on('change', function (ev) {
 		//console.log('username');
@@ -32,6 +33,41 @@ $(document).ready(function () {
 		}
 	
 	});
+	
+	$('#email').on('keyup', function(ev) {
+		var email = $(this).val();
+		emailAvailable.attr('data-status','unchecked');
+		
+		if(email.length >=3 && email.length <= 25) {
+			var ajax = $.post('check-email.php', {
+				'email':email
+			});
+			//data is going to hava available or unavailable
+			ajax.done(function(data) {
+				if(data == 'available') {
+					emailAvailable
+					.attr('data-status', 'available').html('Available');
+				}
+				else{
+					emailAvailable
+					.attr('data-status', 'unavailable').html('Unavailable');
+				}
+			
+			});
+			
+		}
+		else {
+			emailAvailable.attr('data-status', 'unavailable').html('Unavailable');
+					
+		}
+	
+	
+	});
+	
+	
+	
+	
+	
 //onkeydown this is better because you see what the user types
 	$('#password').on('keyup', function(ev) {
 		var password = $(this).val();
@@ -60,6 +96,9 @@ $(document).ready(function () {
 			$('.pass-symbol').attr('data-state', 'achieved');
 		}
 	});
+	
+	
+	
 	$('form').on('submit',function(ev) {
 		if (
 			userAvailable.attr('data-status')== 'unchecked'
