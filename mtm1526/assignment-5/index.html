@@ -37,13 +37,20 @@
             <input id="city" name="city" required>
             <strong class="city-correct" data-status="unchecked">
             	Available</strong>
-        </div>
-        <div>
-        	<label for="countries">Countries</label>
-			<input type="radio" name="countries" value="canada" checked>Canada
-			<input type="radio" name="countries" value="us">US<br>
-        </div>
+        
+         <fieldset>
+     		 <legend>Country</legend>
+        	
+            
+            <input type="radio" id="canada" name="country" value="ca">
+     		<label for="canada">Canada</label>
+      		<input type="radio" id="unitedstates" name="country" value="us">
+      		<label for="unitedstates">United States</label>
+      
+      
+        </fieldset>
        
+       <div class="country-selected"></div>
         <div>
         	<label for ="province">Province</label>
             <select name="canadadropdown">
