@@ -56,3 +56,23 @@
 	color: #090;
 	content: "✔";
 }
+
+.city-correct {
+	font-size: 1.125em;
+}
+
+.city-correct:before {
+	content: "✔";
+}
+.city-correct[data-status="unchecked"]{
+	display:none;
+}
+.city-correct[data-status="available"] {
+	color:#090;
+}
+.city-correct[data-status="unavailable"] {
+	color:#f33;
+}
+.city-correct[data-status="unavailable"]:before {
+	content:"✖";
+}
