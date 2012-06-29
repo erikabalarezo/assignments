@@ -61,6 +61,13 @@
 	font-size: 1.125em;
 }
 
+
+.is-available {
+	color: #393;
+	content: "✔";
+}
+
+
 .city-correct:before {
 	content: "✔";
 }
