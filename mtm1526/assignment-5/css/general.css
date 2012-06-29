@@ -1,18 +1,21 @@
 html {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	background-color:#C4C488;
+	background-color:#51A2A2;
+	/*:#51A2A2;*/
 }
 
 body {
 	margin: 0 auto;
 	padding: 0;
 	width: 50%;
-	background-color:#CBE4E4;
+	background-color:#D9ECEC;
+	
 }
 h1 {
 	margin: 0;
 	padding-top:1em;
 	text-align:center;
+	color:#326565;
 }
 form {
 	padding:1em 0 1em 0;
