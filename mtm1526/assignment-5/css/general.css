@@ -68,18 +68,18 @@
 }
 
 
-.city-correct:before {
+.city-available:before {
 	content: "✔";
 }
-.city-correct[data-status="unchecked"]{
+.city-available[data-status="unchecked"]{
 	display:none;
 }
-.city-correct[data-status="available"] {
+.city-available[data-status="available"] {
 	color:#090;
 }
-.city-correct[data-status="unavailable"] {
+.city-available[data-status="unavailable"] {
 	color:#f33;
 }
-.city-correct[data-status="unavailable"]:before {
+.city-available[data-status="unavailable"]:before {
 	content:"✖";
 }
