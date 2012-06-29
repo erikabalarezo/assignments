@@ -1,3 +1,26 @@
+html {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color:#C4C488;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 50%;
+	background-color:#CBE4E4;
+}
+h1 {
+	margin: 0;
+	padding-top:1em;
+	text-align:center;
+}
+form {
+	padding:1em 0 1em 0;
+		
+}
+div {
+	margin: 1em;
+}
 .user-available {
 	font-size: 1.125em;
 }
@@ -82,4 +105,13 @@
 }
 .city-available[data-status="unavailable"]:before {
 	content:"✖";
+}
+
+fieldset {
+	margin-left:1em;
+	width: 50%;
+}
+#buttonsubmit {
+	padding:1em;
+	margin-left:1em;
 }
