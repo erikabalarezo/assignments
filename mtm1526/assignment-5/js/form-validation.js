@@ -99,14 +99,14 @@ $(document).ready(function () {
 	
 	$('#city').on('change', function(ev) {
 		var city = $(this).val();
+		cityReqs = 0;
 		cityAvailable.attr('data-status','unchecked');
-		
-		
 		
 		if((city.length > 0 && city.length < 50) && (city.match(/[a-zA-Z\s]/)))
 		{
 			
 			cityAvailable.attr('data-status', 'available').html('Available');
+			 cityReqs++;
 			//$('.city-correct').addClass('is-available').html('✔');
 		}
 		else {
