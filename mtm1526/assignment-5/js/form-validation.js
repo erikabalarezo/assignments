@@ -3,6 +3,7 @@ $(document).ready(function () {
 	var userAvailable = $('.user-available');
 	var emailAvailable = $('.email-available');
 	var passwordReqs = 0;
+	var cityAvailable = $('.city-available');
 	var cityReqs = 0;
 	$('#username').on('change', function (ev) {
 		//console.log('username');
@@ -17,12 +18,10 @@ $(document).ready(function () {
 			//data is going to hava available or unavailable
 			ajax.done(function (data) {
 				if(data == 'available') {
-					userAvailable
-					.attr('data-status', 'available').html('Available');
+					userAvailable.attr('data-status', 'available').html('Available');
 				}
 				else{
-					userAvailable
-					.attr('data-status', 'unavailable').html('Unavailable');
+					userAvailable.attr('data-status', 'unavailable').html('Unavailable');
 				}
 			
 			});
@@ -100,12 +99,21 @@ $(document).ready(function () {
 	
 	$('#city').on('change', function(ev) {
 		var city = $(this).val();
-		cityReqs = 0;
-				
+		cityAvailable.attr('data-status','unchecked');
+		
+		
+		
 		if((city.length > 0 && city.length < 50) && (city.match(/[a-zA-Z\s]/)))
 		{
-			cityReqs++;
-		}			
+			
+			cityAvailable.attr('data-status', 'available').html('Available');
+			//$('.city-correct').addClass('is-available').html('✔');
+		}
+		else {
+			cityAvailable.attr('data-status', 'unavailable').html('Unavailable');
+			// $('.city-correct').removeClass('is-available').html('✖');
+			
+		}
 		
 	});
 	
